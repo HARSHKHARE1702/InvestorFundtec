@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FundTech Investment Tracker</h1>
+        
+        <!-- Investment Form -->
+        <h2>Add Investment</h2>
+        <form id="investment-form">
+            <div class="form-group">
+                <label for="invest-amount">Amount Invested:</label>
+                <input type="number" id="invest-amount" placeholder="Enter amount" required>
+            </div>
+            <div class="form-group">
+                <label for="invest-date">Investment Date:</label>
+                <input type="date" id="invest-date" required>
+            </div>
+            <button type="submit">Add Investment</button>
+        </form>
+
+        <!-- Withdrawal Form -->
+        <h2>Add Withdrawal</h2>
+        <form id="withdrawal-form">
+            <div class="form-group">
+                <label for="withdraw-amount">Amount Withdrawn:</label>
+                <input type="number" id="withdraw-amount" placeholder="Enter amount" required>
+            </div>
+            <div class="form-group">
+                <label for="withdraw-date">Withdrawal Date:</label>
+                <input type="date" id="withdraw-date" required>
+            </div>
+            <button type="submit">Add Withdrawal</button>
+        </form>
+
+        <!-- Summary Section -->
+        <h2>Summary</h2>
+        <div class="summary">
+            <p>Total Investments: <span id="total-investments">$0</span></p>
+            <p>Total Withdrawals: <span id="total-withdrawals">$0</span></p>
+            <p>Net Balance: <span id="net-balance">$0</span></p>
+        </div>
+
+        <!-- Transaction Tables -->
+        <h2>Transaction History</h2>
+        <div class="transactions">
+            <h3>Investments</h3>
+            <table id="investment-table">
+                <thead>
+                    <tr>
+                        <th>Amount</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h3>Withdrawals</h3>
+            <table id="withdrawal-table">
+                <thead>
+                    <tr>
+                        <th>Amount</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
